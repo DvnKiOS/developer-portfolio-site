@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
 }
-
+.desktop-nav
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -14,10 +14,12 @@ body {
 html {
   scroll-behavior: smooth;
   background: #EDEDED;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
   color:  #38393E;
+  font-family: "Poppins", sans-serif;;
 }
 
 /* TRANSITION */
@@ -34,16 +36,26 @@ nav,
   display: flex;
 }
 
+
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 18vh;
+  background-color: whitesmoke;
+  border-radius: 15px;
+
 }
 
 .nav-links {
-  gap: 3rem;
+  gap: 4rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-me-btn{
+ 
+  
 }
 
 a {
@@ -60,12 +72,19 @@ a:hover {
 }
 
 .logo {
-  font-size: .5rem;
-}
-.logo-image {
+  font-size: 2.5rem;
   display: flex;
-  width: 40px;
-  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2.5px;
+  
+}
+.logo img {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  
 }
 
 .logo:hover {
@@ -108,6 +127,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+  border-radius: 15px;
 }
 
 .menu-links a {
@@ -156,14 +176,19 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 80vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  
 }
+
 
 .section-container {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px;
 }
 
 /* PROFILE SECTION */
@@ -196,6 +221,14 @@ section {
 .section__text p {
   font-weight: 600;
 }
+.text-container p {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 75px;
+
+}
+
 
 .section__text__p1 {
   text-align: center;
@@ -204,6 +237,16 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+}
+.section__text__p3 {
+  font-size: 1.25rem;
+  margin-top: 1rem; 
+  font-weight: 450;
+  text-wrap: wrap;
+  word-break: break-Word;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .title {
@@ -222,7 +265,7 @@ section {
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 5rem;
 }
 
 /* BUTTONS */
@@ -231,6 +274,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -278,26 +322,38 @@ section {
 
 #about {
   position: relative;
+  justify-content: center;
+  align-content: center ;
+}
+.hero-section-text {
+  width: 800px;
+
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  
 }
 
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  width: 1000px;
+  padding-bottom: 75px;
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+ 
 }
 
 .about-pic {
   border-radius: 2rem;
+  height: 450px;
+  width: auto;
 }
 
 .arrow {
@@ -309,16 +365,19 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
-  border-radius: 2rem;
+  background: whitesmoke;
+  border-radius: 3rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+
 }
 
 .section-container {
   gap: 4rem;
-  height: 80%;
+  height: 65%;
+  width: 80%;
+  
 }
 
 .section__pic-container {
@@ -351,8 +410,8 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  gap: 4rem;
+  justify-content: space-evenly;
 }
 
 article {
@@ -371,6 +430,9 @@ article .icon {
 #projects {
   position: relative;
 }
+.project-tech-used {
+  display: flex;
+}
 
 .color-container {
   border-color: rgb(163, 163, 163);
@@ -379,8 +441,8 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 65%;
+  height: 65%;
 }
 
 .project-title {
@@ -392,6 +454,22 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+.project-website-section  {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+}
+.website-project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.website-project-image{
+ width: 700px;
+ height: 400px;
+ border-radius: 25px;
+}
 
 /* CONTACT */
 
@@ -399,7 +477,7 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 96vh;
 }
 
 .contact-info-upper-container {

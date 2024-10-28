@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨🏾‍💻 DvnCodes_</title>
+    <title>DvnCodes_👨🏾‍💻</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
  
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">DvnCodes_ </div>
+        <div class="logo">Devin K.
+             </div>
         <div>
             <ul class="nav-links">
                 <li><a href=#about>About</a></li>
-                <li><a href=#experience>Experience</a></li>
                 <li><a href=#projects>Projects</a></li>
-                <li><a href=#contact>Contact</a></li>
+                <li class="contact-me-btn"><a href=#contact>Contact</a></li>
+
             </ul>
+            
         </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">DvnCodes_</div>
+        <div class="logo">Devin K.</div>
         <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
@@ -30,7 +34,6 @@
         </div>
 <div class="menu-links">
     <li><a href=#about onclick="toggleMenu()">About</a></li>
-    <li><a href=#experience onclick="toggleMenu()">Experience</a></li>
     <li><a href=#projects onclick="toggleMenu()">Projects</a></li>
     <li><a href=#contact onclick="toggleMenu()">Contact</a></li>
     
@@ -38,41 +41,12 @@
 </div>
     </nav>
 
-    <section id="profile">
-        <div class="section__pic-container">
-            <img class="profile-picture" src="/assets/IMG_0245.jpg" alt="Devin K." />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello I'm</p>
-       <h1 class="title">Devin 👋🏾</h1>
-       <p class="section__text__p2">Software Engineer</p>
-       <div class="btn-container"></div>
-          <button class="btn btn btn-color-1" onclick="window.open('./assets/DevinKingiOSDeveloper.pdf')">Download Resume</button>
-          <button class="btn btn-color-2" onclick="location.href='#contact'">Contact Information</button>
-        <div id="socials-container">
-            <img 
-            src="./assets/linkedin.png"
-             alt="My linkedin profile" 
-             class="icon" 
-             onclick="location.href='https://www.linkedin.com/in/devin-k-525b0a222/'"
-             />
-
-             <img 
-             src="./assets/github.png"
-              alt="My github profile" 
-              class="icon" 
-              onclick="location.href='https://github.com/DvnKiOS'"
-              />
-
-        </div>
-    </div>
-    </section>
-
 
     <section id="about"> 
-        <p class="section__text__p1">Get to Know More</p>
-        <h1 class="title">About Me</h1>
+        <h1 class="section__text__p1">Hello & Welcome 👋🏾 </h1>
+        
         <div class="section-container">
+            
             <div class="section__pic-container">
                 <img 
                 src="./assets/IMG_0734.jpeg" 
@@ -83,7 +57,10 @@
         </div>
 
             <div class="about-details-container">
-                <div class="about-containers">
+                <div class="text-container">
+                    <p>Hi there! I’m Devin King, an iOS developer and app designer based in Upstate New York. I love turning ideas into awesome apps using Swift, SwiftUI, and a bunch of powerful frameworks. I also know my way around web development, helping small businesses build strong online presence with HTML, CSS, and JavaScript.</p>
+                </div>
+                <!-- <div class="about-containers">
                     <div class="details-container">
                         <img
                          src="./assets/experience.png"
@@ -102,106 +79,49 @@
                             <h3>Education</h3>
                             <p>Certificate<br> iOS Development Boot camp <br/>with Angela Yu</p>
                     </div>
-                </div>
-            <div class="text-container">
-                <p>I design and publish iOS applications using Swift, SwiftUI, Combine, as well as websites using HTML, CSS, and JavaScript. 
-                    My software solutions address business needs in fitness, education, and entertainment, featuring user authentication,
-                     data persistence, and seamless network communication. 
-                     I specialize in creating functional and visually appealing software. In my free time, I love to explore and meet new people.</p>
-            </div>
+                    
+                </div> -->
+                <div class="btn-container">
+                    <button class="btn btn btn-color-1" onclick="window.open('./assets/DevinKingiOSDeveloper.pdf')">Download Resume</button>
+                    <button class="btn btn-color-2" onclick="location.href='#contact'">Contact Information</button>
+                 </div>
+                  <div id="socials-container">
+                      <img 
+                      src="./assets/linkedin.png"
+                       alt="My linkedin profile" 
+                       class="icon" 
+                       onclick="location.href='https://www.linkedin.com/in/devin-k-525b0a222/'"
+                       />
+          
+                       <img 
+                       src="./assets/github.png"
+                        alt="My github profile" 
+                        class="icon" 
+                        onclick="location.href='https://github.com/DvnKiOS'"
+                        />
+                        <img 
+                        src="./assets/twitter-2.png"
+                         alt="My github profile" 
+                         class="icon" 
+                         onclick="location.href='https://github.com/DvnKiOS'"
+                         />
+          
+                  </div>
+         
         </div>
         </div>
         <img
-        src="./assets/arrow.png"
+        src="./assets/down.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
       />
     </section>
-    <section id="experience">
-        <p class="section__text__p1">Take a Look At My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">iOS Development</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/swift.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Swift</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                    <img 
-                    src="/assets/blueSwiftLogo.png"
-                    alt="SwiftUI Logo"
-                    class="icon"
-                    />
-                    <div>
-                        <H3>SwiftUI</H3>
-                        <p>2 Years</p>
-                    </div>
-                </article>
-                <article>
-                    <img 
-                    src="/assets/apple-2.png"
-                    alt="SwiftUI Logo"
-                    class="icon"
-                    />
-                    <div>
-                        <H3>CoreData</H3>
-                        <p>4 Years</p>
-                    </div>
-                </article>
-                <article>
-                    <img 
-                    src="/assets/technology.png"
-                    alt="SwiftUI Logo"
-                    class="icon"
-                    />
-                    <div>
-                        <H3>UI/UX</H3>
-                        <p>4 Years</p>
-                    </div>
-                </article>
-                <article>
-                    <img 
-                    src="/assets/blueSwiftLogo.png"
-                    alt="SwiftUI Logo"
-                    class="icon"
-                    />
-                    <div>
-                        <H3>Combine</H3>
-                        <p>2 Years</p>
-                    </div>
-                </article>
-                
-                </div>
-            </div>
-            
-                  </article>
-                  
-                  </div>
-              </div>
-          </div>
-        </div>
-        <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+    
     
 
     <section id="projects"> 
-        <p class="section__text__p1">Take a Look at My</p>
+      
         <h1 class="title">Recent Projects</h1>
         <div class="experience-details-contailer">
             <div class="about-containers">
@@ -245,11 +165,54 @@
                   </button>
                 </div>
               </div>
+
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img 
+                  src="/assets/TheMarkMateDemoImage1.png" 
+                  alt="project-2" 
+                  class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">The MarkMate</h2>  
+                <div class="btn-container">
+                  <button class="btn btn-color-2" onclick="location.href='https://github.com'">
+                      Github
+                  </button>
+                  <button class=" btn btn-color-2 project-btn" 
+                  onclick="location.href='https://github.com'">
+                  Live Demo
+  
+                  </button>
+                </div>
+              </div>
+          
+
               
             </div>
+            <div class="project-website-section">
+                <div class="website-project">
+                    <img class="website-project-image" src="assets/Screenshot 2024-10-27 at 7.27.45 PM.png" alt="DvnCodesLogo">
+                    <h2 class="experience-sub-title project-title">Heavy Maintenance</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-1">Github</button>
+                        <button class="btn btn-color-2">Live Demo</button>
+                    </div>
+                </div>
+                <!-- <div class="project-website-section">
+                    <div class="website-project">
+                        <img class="website-project-image" src="assets/DvnCodes.png" alt="DvnCodesLogo">
+                        <h2 class="experience-sub-title project-title">DvnCodes SignUp</h2>
+                        <div class="btn-container">
+                            <button class="btn btn-color-1">Github</button>
+                            <button class="btn btn-color-2">Live Demo</button>
+                        </div>
+                    </div>
+                  </div> -->
+              </div>
         </div>
         <img
-        src="./assets/arrow.png"
+        src="./assets/down.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
@@ -286,16 +249,7 @@
     
 </section>
 <footer>
-    <nav>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href=#about>About</a></li>
-                <li><a href=#experience>Experience</a></li>
-                <li><a href=#projects>Projects</a></li>
-                <li><a href=#contact>Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+   
     <p>Copyright &#169; 2024 DvnCodes All Rights Reserved</p>
 </footer>
 <script src="script.js"> </script>    
