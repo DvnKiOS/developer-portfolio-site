@@ -25,6 +25,7 @@
   margin-bottom: 30px; /* Space below logo */
   color: black ;
   text-decoration: none;
+  position: absolute;
 }
 
 #desktop-nav .nav-links {
@@ -334,6 +335,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  align-items: center;
 }
 
 #socials-container {
@@ -387,15 +389,43 @@ section {
   
  
  }
- .btn-container{
  
- }
-.about-details-container, .btn-container {
-
+.developer-projects-1 {
+  flex-direction: column;
+}
+.developer-projects-1  p {
+  width: 100px;
+}
+.color-container {
+  background-color: #38393E;
+}
+.mobile-project .mobile-project-image {
+  width: 150px;
+  height: 300px
+}
+.mobile-icon-image {
+  
+  height: 10px;
+  width: 50px;
+}
+.mobile-project P {
+  font-size:12px;
+  height: auto;
+  font-weight: 300;
+}
+.mobile-project {
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.project-tech-stack img {
+  height: 30px;
+  width: 30px;
 }
  .text-container p {
   font-weight: 100;
   font-size: 12px;
+  line-height: 1.5;
  }
  .section-container {
   
@@ -412,8 +442,8 @@ section {
 align-self: flex-start;
 }
 
-
 }
+
 /* ICONS */
 
 .icon {
@@ -491,6 +521,7 @@ padding-top: 25px;
   position: relative;
   justify-content: center;
   align-content: space-evenly ;
+  width: 85%;
 }
 .hero-section-text {
   width: 700px;
@@ -676,7 +707,7 @@ font-weight: 400;
 .project-details-text-container{
 max-width: 300px;
 font-weight: 400;
-padding-bottom: 75px;
+
 font-size: 18px;
 }
   
@@ -718,11 +749,12 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
-  position: relative;
+  
   width: 85%;
   height: 96vh;
   justify-content: center;
-
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -733,7 +765,8 @@ article .icon {
 .color-container {
   display: flex;
   background-color: white;
-  width: 90%;
+justify-content: center;
+align-items: center;
   height: auto;
   border-radius: 25px;
   border-color: #38393E;
@@ -780,6 +813,8 @@ article .icon {
   justify-content: space-evenly;
   padding-top: 5px;
   width: 45%;
+  justify-content: center;
+align-items: center;
 }
 
 .mobile-project-image {
@@ -862,6 +897,7 @@ margin-bottom: 5px;
   flex-direction: column;
   height: 96vh;
   align-items: center;
+  width: 85%;
 }
 
 .contact-info-upper-container {
