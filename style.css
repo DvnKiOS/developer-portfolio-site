@@ -521,7 +521,7 @@ padding-top: 25px;
   position: relative;
   justify-content: center;
   align-content: space-evenly ;
-  width: 85%;
+  width: 100%;
 }
 .hero-section-text {
   width: 700px;
@@ -750,7 +750,7 @@ article .icon {
 
 #projects {
   
-  width: 85%;
+  width: 100%;
   height: 96vh;
   justify-content: center;
   justify-content: center;
@@ -897,7 +897,7 @@ margin-bottom: 5px;
   flex-direction: column;
   height: 96vh;
   align-items: center;
-  width: 85%;
+  width: 100%;
 }
 
 .contact-info-upper-container {
