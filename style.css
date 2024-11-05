@@ -148,13 +148,16 @@ a:hover {
   align-items: center;
   justify-content: space-around;
   margin: 2.5px;
+  background-color: #CD6727;
   
 }
 .logo img {
   display: flex;
-  width: 25px;
-  height: 25px;
-  border-radius: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 360px;
+
+
   
 }
 
@@ -184,8 +187,8 @@ a:hover {
 
 .hamburger-icon span {
   width: 100%;
-  height: 2px;
-  background-color: black;
+  height: 4px;
+  background-color: #CD6727;
   transition: all 0.3 ease-in-out;
 }
 
@@ -193,7 +196,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color:whitesmoke;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -259,7 +262,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 25px;
+
 }
 
 /* PROFILE SECTION */
@@ -339,7 +342,78 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .about-containers, .about-details-container {
+    display: flex;           /* Ensure it uses flex layout */
+    flex-direction: column-reverse;   /* Stack items vertically */
+    align-items: center;      /* Center items horizontally */
+  
+    justify-content: space-evenly;           /* Take full width of the screen */
+               /* Optional: Set max width for better readability */
 
+  }
+  .about-details-container {
+   justify-content: space-evenly;
+  }
+  #about{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .section__pic-container{
+  
+    
+
+    align-items: center;
+    justify-content: center;
+  
+  
+  }
+  .arrow {
+    visibility: hidden;
+  }
+ .about-pic {
+  max-width: 220px;
+  max-height: 220px;
+  border-radius: 360px;
+ 
+  
+ }
+ .text-container p{
+  width: 300px;
+  height: 100px;
+  
+  
+ 
+ }
+ .btn-container{
+ 
+ }
+.about-details-container, .btn-container {
+
+}
+ .text-container p {
+  font-weight: 100;
+  font-size: 12px;
+ }
+ .section-container {
+  
+  height: auto;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+ .about-containers {
+  flex-direction: column-reverse;
+ }
+.about-containers p {
+
+align-self: flex-start;
+}
+
+
+}
 /* ICONS */
 
 .icon {
@@ -456,9 +530,9 @@ margin-bottom: 50px;
 
 /* Base styling for all images */
 .about-pic {
-  position: absolute;
-width: 425px;
-height: 450px;
+  
+width: 325px;
+height: 350px;
   transition: all 0.5s ease;
   border-radius: 25px;
 
