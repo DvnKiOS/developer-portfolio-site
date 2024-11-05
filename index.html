@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script rel="JavaScript" href="script.js"></script>
 
  
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Devin K.
+        <div >
+            <img src="/assets/Dvn__transparent-.png"
+            class="header-logo">
              </div>
         <div>
             <ul class="nav-links">
@@ -25,7 +28,9 @@
         </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Devin K.</div>
+        <div class="logo">
+            <img src="/assets/DvnCodes.png">
+        </div>
         <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
@@ -40,78 +45,47 @@
 </div>
 </div>
     </nav>
-
-
+  
     <section id="about"> 
-        <h1 class="section__text__p1">Hello & Welcome 👋🏾 </h1>
-        
-        <div class="section-container">
-            
-            <div class="section__pic-container">
-                <img 
-                src="./assets/IMG_0734.jpeg" 
-                alt="profile picture"
-                class="about-pic"
-                />
+      
+        <div class="welcome-section">
             
         </div>
+        <div class="section-container">
+            
+           
 
             <div class="about-details-container">
                 <div class="text-container">
-                    <p>Hi there! I’m Devin King, an iOS developer and app designer based in Upstate New York. I love turning ideas into awesome apps using Swift, SwiftUI, and a bunch of powerful frameworks. I also know my way around web development, helping small businesses build strong online presence with HTML, CSS, and JavaScript.</p>
+                    <p>I’m Devin King, an iOS developer and app designer based in Upstate New York. I create awesome apps using Swift, SwiftUI, and powerful frameworks. 
+                        I also know web development, helping small businesses build strong online presences with HTML, CSS, and JavaScript.</p>
                 </div>
-                <!-- <div class="about-containers">
-                    <div class="details-container">
-                        <img
-                         src="./assets/experience.png"
-                        alt="experience icon"
-                        class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p>3+ years <br /> iOS Development</p>
-                    </div>
-                    <div class="details-container">
-                            <img 
-                            src="./assets/education.png"
-                            alt="second profile picture"
-                            class="icon"
-                            />
-                            <h3>Education</h3>
-                            <p>Certificate<br> iOS Development Boot camp <br/>with Angela Yu</p>
-                    </div>
-                    
-                </div> -->
+              
                 <div class="btn-container">
-                    <button class="btn btn btn-color-1" onclick="window.open('./assets/DevinKingiOSDeveloper.pdf')">Download Resume</button>
-                    <button class="btn btn-color-2" onclick="location.href='#contact'">Contact Information</button>
+                    
+                    <button class="btn btn btn-color-3" onclick="window.open('./assets/DevinKingiOSDeveloper.pdf')">Download Resume</button>
+                    <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Information</button>
+
                  </div>
-                  <div id="socials-container">
-                      <img 
-                      src="./assets/linkedin.png"
-                       alt="My linkedin profile" 
-                       class="icon" 
-                       onclick="location.href='https://www.linkedin.com/in/devin-k-525b0a222/'"
-                       />
-          
-                       <img 
-                       src="./assets/github.png"
-                        alt="My github profile" 
-                        class="icon" 
-                        onclick="location.href='https://github.com/DvnKiOS'"
-                        />
-                        <img 
-                        src="./assets/twitter-2.png"
-                         alt="My github profile" 
-                         class="icon" 
-                         onclick="location.href='https://github.com/DvnKiOS'"
-                         />
-          
-                  </div>
+                
+                  
          
         </div>
+        <div class="section__pic-container">
+                
+            <img 
+            src="./assets/devinwithhat.jpeg" 
+            alt="profile picture"
+            class="about-pic deg45"
+            />
+           
+            
+           
+
+    </div>
         </div>
         <img
-        src="./assets/down.png"
+        src="./assets/chevron-sign-down.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
@@ -121,127 +95,300 @@
     
 
     <section id="projects"> 
+       
+        <h1 class="title">My Recent Projects 👨🏾‍💻</h1>
+        <br>
+        <br>
+        <br>
+  <div class="developer-projects-1">
+    <div class="mobile-project color-container">
+
+        <div class="mobile-project-details">
+        <img src="assets/capsules copy.jpg"
+        class="mobile-icon-image">
+
+    <img src="assets/PanaceFinalImage.png"
+    class="mobile-project-image">
+</div>
+
+<div class="project-tech-stack">
+    <div class="project-details-text-container">
+    <p>
+        <b>Panacea: PTCB Prep</b>, a comprehensive iOS application designed specifically for Pharmacy Technician Certification Board (PTCB) examination preparation. The application functions as an extensive study resource and has been instrumental in enhancing the professional development of our workforce through targeted educational programs.</p>
+
+    </p>
+    </div>
+    <div class="tech-used">
+        <h4 class="tech-used-text">Tech I Used</h4>
+    </div>
+    <div id="socials-container">
+        <div class="icon-container">
+          <img 
+            src="./assets/swift.png" 
+            alt="My LinkedIn profile" 
+            class="tech-used-icon" 
+
+          />
+          <span class="hover-text">Swift</span>
+        </div>
+        
+       
+        <div class="icon-container">
+          <img 
+            src="./assets/blueSwiftLogo.png" 
+            alt="My GitHub profile" 
+            class="icon" 
+        
+          />
+          <span class="hover-text">SwiftUI</span>
+        </div>
       
-        <h1 class="title">Recent Projects</h1>
-        <div class="experience-details-contailer">
-            <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img 
-                src="/assets/PanaceaDemoImage2.png" 
-                alt="project-1" 
-                class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Panacea PTCB Prep</h2>  
-              <div class="btn-container">
-                <button class="btn btn-color-2" onclick="location.href='https://github.com'">
-                    Github
-                </button>
-                <button class=" btn btn-color-2 project-btn" 
-                onclick="location.href='https://github.com'">
-                Live Demo
+        <div class="icon-container">
+          <img 
+            src="./assets/xcode-12-96x96_2x.png" 
+            alt="My LinkedIn profile" 
+            class="icon" 
+       
+          />
+          <span class="hover-text">Xcode</span>
+        </div>
+      </div>
+      
+      <div id="socials-container">
+       
+        <div class="icon-container">
+            <img 
+              src="./assets/google-admob.svg" 
+              alt="My GitHub profile" 
+              class="icon" 
+             
+            />
+            <span class="hover-text">Google AdMob</span>
+          </div>
+        
+          
+        
+          <div class="icon-container">
+            <img 
+              src="./assets/1189714.png" 
+              alt="My LinkedIn profile" 
+              class="icon" 
+          
+            />
+            <span class="hover-text">CocoaPods</span>
+          </div>
 
-                </button>
-              </div>
+          
+
+    </div>
+    <div class="btn-container">
+        
+        <img src="assets/downloadonappstoreapple.png"
+        class="project-icon">
+        
+        
+    
+    
+        
+    
+    
+   </div>
+    
+      
+
+</div>
+               
+
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                  <img 
-                  src="/assets/TheMarkMateDemoImage1.png" 
-                  alt="project-2" 
-                  class="project-img"
-                  />
-                </div>
-                <h2 class="experience-sub-title project-title">The MarkMate</h2>  
-                <div class="btn-container">
-                  <button class="btn btn-color-2" onclick="location.href='https://github.com'">
-                      Github
-                  </button>
-                  <button class=" btn btn-color-2 project-btn" 
-                  onclick="location.href='https://github.com'">
-                  Live Demo
-  
-                  </button>
-                </div>
-              </div>
+           
+        
 
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <img 
-                  src="/assets/TheMarkMateDemoImage1.png" 
-                  alt="project-2" 
-                  class="project-img"
-                  />
+            <div class="mobile-project color-container">
+
+                <div class="mobile-project-details" onclick="cycleImages()">
+                <img src="assets/meetup copy 2.png"
+                class="mobile-icon-image">
+                
+            <img src="assets/MarkMateTestImage.png"
+            class="mobile-project-image">
+        </div>
+        
+                    <div class="project-tech-stack">
+                        <div class="project-details-text-container">
+                        <p>
+                            <b>MarkMate</b>, an intuitive iOS watermark app, simplifies adding watermarks and overlays to images. Seamless Google Ads integration and user-friendly features like TableViews for image management and SCLAlertView for alerts enhance the user experience.
+
+                        </p>
+                        </div>
+                        <div class="tech-used">
+                            <h4 class="tech-used-text">Tech Used</h4>
+                        </div>
+                        <div id="socials-container">
+                            <div class="icon-container">
+                              <img 
+                                src="./assets/swift.png" 
+                                alt="My LinkedIn profile" 
+                                class="tech-used-icon" 
+                               
+                              />
+                              <span class="hover-text">Swift</span>
+                            </div>
+                            
+                           
+                            <div class="icon-container">
+                              <img 
+                                src="./assets/blueSwiftLogo.png" 
+                                alt="My GitHub profile" 
+                                class="icon" 
+                           
+                              />
+                              <span class="hover-text">SwiftUI</span>
+                            </div>
+                          
+                            <div class="icon-container">
+                              <img 
+                                src="./assets/xcode-12-96x96_2x.png" 
+                                alt="My LinkedIn profile" 
+                                class="icon" 
+                               
+                              />
+                              <span class="hover-text">Xcode</span>
+                            </div>
+                          </div>
+                          
+                          <div id="socials-container">
+                           
+                            <div class="icon-container">
+                                <img 
+                                  src="./assets/google-admob.svg" 
+                                  alt="My GitHub profile" 
+                                  class="icon" 
+            
+                                />
+                                <span class="hover-text">Google AdMob</span>
+                              </div>
+                            
+                              <div class="icon-container">
+                                <img 
+                                  src="./assets/logo-vertical.png" 
+                                  alt="My GitHub profile" 
+                                  class="icon" 
+                              
+                                />
+                                <span class="hover-text">Firebase</span>
+                              </div>
+                            
+                              <div class="icon-container">
+                                <img 
+                                  src="./assets/1189714.png" 
+                                  alt="My LinkedIn profile" 
+                                  class="icon" 
+                                
+                                />
+                                <span class="hover-text">CocoaPods</span>
+                              </div>
+                   
+                              
+                
+                        </div>
+                        <div class="btn-container">
+                            
+                            <img src="assets/downloadonappstoreapple.png"
+                            class="project-icon">
+                            
+                            
+                        
+                        
+                            
+                        
+                        
+                       </div>
+                        
+                          
+                 
                 </div>
-                <h2 class="experience-sub-title project-title">The MarkMate</h2>  
-                <div class="btn-container">
-                  <button class="btn btn-color-2" onclick="location.href='https://github.com'">
-                      Github
-                  </button>
-                  <button class=" btn btn-color-2 project-btn" 
-                  onclick="location.href='https://github.com'">
-                  Live Demo
+                       
+        
+                    </div>                                    
+       
+    </div>
+
+   
+    
+</div>
+
+
+     
+       
   
-                  </button>
-                </div>
-              </div>
+  </div>
+</div>
           
 
               
-            </div>
-            <div class="project-website-section">
-                <div class="website-project">
-                    <img class="website-project-image" src="assets/Screenshot 2024-10-27 at 7.27.45 PM.png" alt="DvnCodesLogo">
-                    <h2 class="experience-sub-title project-title">Heavy Maintenance</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-1">Github</button>
-                        <button class="btn btn-color-2">Live Demo</button>
-                    </div>
-                </div>
-                <!-- <div class="project-website-section">
-                    <div class="website-project">
-                        <img class="website-project-image" src="assets/DvnCodes.png" alt="DvnCodesLogo">
-                        <h2 class="experience-sub-title project-title">DvnCodes SignUp</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-1">Github</button>
-                            <button class="btn btn-color-2">Live Demo</button>
-                        </div>
-                    </div>
-                  </div> -->
-              </div>
-        </div>
+
+
+           
+        
+     
+      
         <img
-        src="./assets/down.png"
+        src="./assets/chevron-sign-down.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
       />
     </section>
+
+    
 <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
         <div class="contact-info-container">
+            <a href="mailto:exampleEmail@gmail.com">
             <img 
-            src="assets/email.png" 
-            alt="Email icon"
-            class="icon contact-icon email-icon"
+                src="assets/email.png" 
+                alt="Email icon"
+                class="icon contact-icon"
             />
-            <p><a href="mailto:exampleEmail@gmail.com">
-                DvnCodes@Gmail.com  
-            </p></a>
+           
+               
+            </a>
+        </div>
+        
+        <div class="contact-info-container">
+            <a href="www.linkedin.com">
+            <img 
+                src="assets/linkedin.png" 
+                alt="Email icon"
+                class="icon contact-icon"
+            />
+           
+               
+            </a>
         </div>
         <div class="contact-info-container">
+            <a href="https://x.com/dvnCodes_">
             <img 
-            src="assets/linkedin.png" 
-            alt="Linkedin icon"
-            class="icon contact-icon"
+                src="assets/twitter-2.png" 
+                alt="Email icon"
+                class="icon contact-icon"
             />
-            <p><a href="https://www.linkedin.com/in/devin-k-525b0a222/">
-                Linkedin 
-            </p></a>
-            
+           
+               
+            </a>
+        </div>
+        <div class="contact-info-container">
+            <a href="https://github.com/DvnKiOS">
+            <img 
+                src="assets/github.png" 
+                alt="Email icon"
+                class="icon contact-icon"
+            />
+           
+               
+            </a>
         </div>
     </div>
 </div>
