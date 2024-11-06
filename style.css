@@ -25,7 +25,6 @@
   margin-bottom: 30px; /* Space below logo */
   color: black ;
   text-decoration: none;
-  position: absolute;
 }
 
 #desktop-nav .nav-links {
@@ -67,6 +66,7 @@
 }
 
 /* Hide the desktop nav on smaller screens */
+
 
 
 /* Style for mobile navigation (hamburger menu) */
@@ -266,6 +266,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  width: 100%
 }
 .profile-picture{
   border-radius: 2rem;
@@ -289,21 +290,22 @@ section {
 .section__text p {
   font-weight: 600;
 }
+
 .text-container p {
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 19px;
   text-align: center;
-  margin: 25px  ;
+  line-height: 1.75;
+  width: 95%;
+
+  
 
   align-items: center;
   justify-content: center;
+  margin-bottom: 125px;
+  margin-top: 15px;
+}
 
-}
-.welcome-section {
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50px;
-}
 
 
 .section__text__p1 {
@@ -328,7 +330,6 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  align-items: center;
 }
 
 #socials-container {
@@ -337,21 +338,22 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .about-containers, .about-details-container {
     display: flex;           /* Ensure it uses flex layout */
     flex-direction: column-reverse;   /* Stack items vertically */
     align-items: center;      /* Center items horizontally */
-  
+       margin-bottom: 0px;
     justify-content: space-evenly;           /* Take full width of the screen */
                /* Optional: Set max width for better readability */
 
   }
-  .about-details-container p {
- 
-   margin-top: 15px;
-   margin-bottom: 8px;
-  }
+  .developer-projects-1{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+  } 
   #about{
     display: flex;
     flex-direction: column-reverse;
@@ -367,64 +369,35 @@ section {
   
   
   }
-  .arrow {
-    visibility: hidden;
-  }
- .about-pic {
-  max-width: 220px;
-  max-height: 220px;
-  border-radius: 360px;
+
+ .section-container .about-pic {
+ width: 165px;
+  height: 185px;
+
+ 
  
   
  }
  .text-container p{
-  width: 300px;
+  width: 225px;
   height: 100px;
   
   
  
  }
+ .btn-container{
  
-.developer-projects-1 {
-  flex-direction: column;
-}
-.developer-projects-1  p {
-  width: 100px;
-}
-.color-container {
-  background-color: #38393E;
-}
-.mobile-project .mobile-project-image {
-  width: 175px;
-  height: 450px
-}
-.mobile-icon-image {
-  
-  height: 10px;
-  width: 50px;
-}
-.mobile-project P {
-  font-size:16px;
-  height: 300px;
-  font-weight: 500;
-  padding-top: 25px;
-}
-.mobile-project {
-  padding: 15px;
-  justify-content: center;
-  align-items: center;
-}
-.project-tech-stack img {
-  height: 30px;
-  width: 30px;
+ }
+.about-details-container, .btn-container {
+  gap: 7rem;
+
 }
  .text-container p {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
+  font-weight: 300;
+  font-size: 16 px;
  }
  .section-container {
-  
+  width: 85%;
   height: auto;
   flex-direction: column-reverse;
   justify-content: space-evenly;
@@ -437,9 +410,22 @@ section {
 
 align-self: flex-start;
 }
+.about-text-container p {
 
+  width: 25px;
+}
+.about-me-text {
+  width: 1px;
+}
+.header-logo{ 
+  height: 80px;
+  width:80px;
+  border-radius: 360px;
+  background-color: #CD6727;
+  
 }
 
+}
 /* ICONS */
 
 .icon {
@@ -453,8 +439,7 @@ align-self: flex-start;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 15px;
-padding-top: 25px;  
+ 
 
 }
 
@@ -517,7 +502,6 @@ padding-top: 25px;
   position: relative;
   justify-content: center;
   align-content: space-evenly ;
-  width: 100%;
 }
 .hero-section-text {
   width: 700px;
@@ -536,8 +520,7 @@ padding-top: 25px;
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-  width: 900px;
-
+  
   align-items: center;
 }
 
@@ -550,21 +533,48 @@ padding-top: 25px;
 /* Container styling */
 .section__pic-container {
   position: relative;
-  width: 150px; /* Adjust width as needed */
-  height: auto;
+  
+
+  justify-content: center;
+  align-items: center;
  
 }
 
 /* Base styling for all images */
 .about-pic {
   
-width: 450px;
-height: 550px;
+width: 400px;
+height: 400px;
   transition: all 0.5s ease;
   border-radius: 25px;
 
  
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+/* Specific styles for each rotation */
+.deg45 {
+ left: 0px;
+ 
+}
+.about-text-container {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+  height: auto;
+  max-width: 700px;
+text-align: center;
+
+}
+.about-text-container p {
+width: auto;
+height: 300px;
+font-weight: 400;
+font-size: 19px;
+line-height: 1.65;
 }
 
 
@@ -574,8 +584,8 @@ height: 550px;
 
 .arrow {
   position: absolute;
-  right: 0.5rem;
-  bottom: 2rem;
+  right: -9rem;
+  bottom: -0.25rem;
 }
 
 .details-container {
@@ -630,10 +640,10 @@ height: 550px;
 
 
 .section-container {
-  gap: 10rem;
-  
+ 
+  height: 60%;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
   cursor: pointer;
 
@@ -696,9 +706,9 @@ font-weight: 400;
 
 }
 .project-details-text-container{
-max-width: 300px;
+width: 300px;
 font-weight: 400;
-
+padding-bottom: 75px;
 font-size: 18px;
 }
   
@@ -740,12 +750,13 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
-  
-  width: 85%;
+  position: relative;
+  width: 90%%;
   height: 96vh;
   justify-content: center;
-  justify-content: center;
   align-items: center;
+  
+
   
 }
 
@@ -756,11 +767,11 @@ article .icon {
 .color-container {
   display: flex;
   background-color: white;
-justify-content: center;
-align-items: center;
+  width: auto;
   height: auto;
-  border-radius: 25px;
+  border-radius: 35px;
   border-color: #38393E;
+ 
   
 }
 
@@ -804,8 +815,6 @@ align-items: center;
   justify-content: space-evenly;
   padding-top: 5px;
   width: 45%;
-  justify-content: center;
-align-items: center;
 }
 
 .mobile-project-image {
@@ -886,9 +895,9 @@ margin-bottom: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 96vh;
   align-items: center;
-  width: 85%;
+  width: 90%;
 }
 
 .contact-info-upper-container {
