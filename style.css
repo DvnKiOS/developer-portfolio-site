@@ -593,6 +593,8 @@ line-height: 1.65;
   position: absolute;
   right: -9rem;
   bottom: -0.25rem;
+  width: 80px; /* Adjust size as needed */
+  height: auto;
 }
 
 .details-container {
@@ -758,10 +760,11 @@ article .icon {
 
 #projects {
   position: relative;
-  width: 90%%;
+  width: 90%;
   height: 96vh;
   justify-content: center;
   align-items: center;
+
   
 
   
