@@ -73,6 +73,7 @@
 #hamburger-nav {
   display: none; /* Hide on desktop */
   /* Additional mobile styles here */
+  width: 100%
 }
 .desktop-nav
 body {
@@ -108,9 +109,9 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 18vh;
+  height: 15vh;
   background-color: whitesmoke;
-  border-radius: 15px;
+  border-radius: 12px;
 
 }
 
@@ -248,7 +249,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-  
+
 }
 
 
@@ -266,7 +267,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-  width: 100%
+
 }
 .profile-picture{
   border-radius: 2rem;
@@ -275,7 +276,7 @@ section {
 .section__pic-container {
   display: flex;
   height: 400px;
-  width: 400px;
+
   margin: auto 0;
   border-radius: 2rem;
   
@@ -292,7 +293,7 @@ section {
 }
 
 .text-container p {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 19px;
   text-align: center;
   line-height: 1.75;
@@ -328,8 +329,11 @@ section {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  align-content: center;
+  justify-content: center;
   text-align: center;
+
 }
 
 #socials-container {
@@ -343,8 +347,9 @@ section {
     display: flex;           /* Ensure it uses flex layout */
     flex-direction: column-reverse;   /* Stack items vertically */
     align-items: center;      /* Center items horizontally */
-       margin-bottom: 0px;
-    justify-content: space-evenly;           /* Take full width of the screen */
+       padding-bottom: 15px;
+    justify-content: space-evenly;    
+    justify-content: center;       /* Take full width of the screen */
                /* Optional: Set max width for better readability */
 
   }
@@ -357,9 +362,15 @@ section {
   #about{
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
+  
   }
+  #about, .section-container {
+    align-content: center;
+    justify-content: center;
+  }
+  
   .section__pic-container{
   
     
@@ -377,38 +388,46 @@ section {
   
 
  .section-container .about-pic {
- width: 165px;
-  height: 185px;
-  margin-bottom: 45px;
+ width: 275px;
+  height: 325px;
+  
 
  
  
   
  }
+#projects h1 {
+  font-size: auto
+  ;
+  margin-top: 50px;
+ }
+  
 
  .text-container p{
   width: 225px;
   height: 100px;
+  text-align: center;
   
   
  
  }
- .btn-container{
- 
+ .welcome-section {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
  }
-.about-details-container, .btn-container {
-  gap: 7rem;
 
-}
+
  .text-container p {
   font-weight: 300;
   font-size: 16 px;
  }
  .section-container {
-  width: 85%;
+
   height: auto;
   flex-direction: column-reverse;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
  }
  .about-containers {
@@ -421,6 +440,7 @@ align-self: flex-start;
 .about-text-container p {
 
   width: 25px;
+  padding-bottom: 25px;
 }
 .about-me-text {
   width: 1px;
@@ -432,6 +452,39 @@ align-self: flex-start;
   background-color: #CD6727;
   
 }
+
+.color-container {
+  width: 500px;
+}
+ .mobile-icon-image {
+  display: flex;
+  width: 35px;
+  height: 35px;
+}
+.color-container .mobile-project-image  {
+width: 150px;
+
+}
+.color-container .project-details-text-container {
+width: auto;
+height: auto;
+
+
+  }
+  .color-container p {
+    width: 90px;
+   font-weight: 400;
+    font-size: 16px;
+    padding: 15px
+    }
+    .color-container .tech-used-icon {
+      width: 45px;
+      height: 45px;
+      }
+      .color-container .project-icon {
+        width: 125px;
+        height: 50px;
+        }
 
 }
 /* ICONS */
@@ -517,9 +570,7 @@ align-self: flex-start;
 }
 
 .about-containers {
-  gap: 4rem;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
+
   justify-content: center;
  align-content: center;
   
@@ -551,10 +602,10 @@ align-self: flex-start;
 /* Base styling for all images */
 .about-pic {
   
-width: 400px;
+width: 550px;
 height: 550px;
   transition: all 0.5s ease;
-  border-radius: 25px;
+  border-radius: 36px;
 
  
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
@@ -696,7 +747,7 @@ font-family: Arial, sans-serif;
   justify-content:center;
   align-content: center;
   gap: 125px;
-  margin-bottom: 35px;
+
 } 
 
 
@@ -718,8 +769,9 @@ font-weight: 400;
 .project-details-text-container{
 width: 300px;
 font-weight: 400;
-padding-bottom: 75px;
+padding-bottom: 35px;
 font-size: 18px;
+padding-top: 35px;
 }
   
 
@@ -761,7 +813,7 @@ article .icon {
 
 #projects {
   position: relative;
-  width: 90%;
+ 
   height: 96vh;
   justify-content: center;
   align-items: center;
@@ -778,10 +830,10 @@ article .icon {
 .color-container {
   display: flex;
   background-color: white;
-  width: auto;
-  height: auto;
+
   border-radius: 35px;
   border-color: #38393E;
+
  
   
 }
@@ -789,8 +841,8 @@ article .icon {
 .color-container-2{
   display: flex;
   background-color: white;
-  width: auto;
-  height: auto;
+  width: 450px;
+  height: 600px;
   border-radius: 25px;
   border-color: #38393E;
 }
@@ -815,7 +867,7 @@ article .icon {
 .project-img {
   border-radius: 4rem;
   width: auto;
-  height: 500px;
+  height: 450px;
   background: none;
 }
 .mobile-project {
@@ -825,7 +877,7 @@ article .icon {
   gap: 1rem;
   justify-content: space-evenly;
   padding-top: 5px;
-  width: 45%;
+
 }
 
 .mobile-project-image {
@@ -833,7 +885,7 @@ article .icon {
   width: 325px; /* Adjust based on your layout */
   transition: opacity 0.5s ease-in-out;
   height: auto;
-  
+
   padding: 25px;
 }
 
@@ -908,8 +960,8 @@ margin-bottom: 5px;
   flex-direction: column;
   height: 96vh;
   align-items: center;
-  width: 90%;
 }
+ 
 
 .contact-info-upper-container {
   display: flex;
@@ -920,6 +972,7 @@ margin-bottom: 5px;
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  align-items: center;
 }
 
 .contact-info-container {
