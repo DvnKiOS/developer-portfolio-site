@@ -326,56 +326,40 @@
 
     
 <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-            <a href="mailto:exampleEmail@gmail.com">
-            <img 
-                src="assets/email.png" 
-                alt="Email icon"
-                class="icon contact-icon"
-            />
-           
-               
-            </a>
-        </div>
-        
-        <div class="contact-info-container">
-            <a href="www.linkedin.com">
-            <img 
-                src="assets/linkedin.png" 
-                alt="Email icon"
-                class="icon contact-icon"
-            />
-           
-               
-            </a>
-        </div>
-        <div class="contact-info-container">
-            <a href="https://x.com/dvnCodes_">
-            <img 
-                src="assets/twitter-2.png" 
-                alt="Email icon"
-                class="icon contact-icon"
-            />
-           
-               
-            </a>
-        </div>
-        <div class="contact-info-container">
-            <a href="https://github.com/DvnKiOS">
-            <img 
-                src="assets/github.png" 
-                alt="Email icon"
-                class="icon contact-icon"
-            />
-           
-               
-            </a>
-        </div>
+  <div class="contact-intro">
+    <h2 class="contact-title">Get in Touch</h2>
+    <p class="contact-description">
+      Fill out the form below and I'll get back to you as soon as possible.
+    </p>
+  </div>
+
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+    <input type="hidden" name="from_name" value="My Website" />
+    <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+
+    <div class="form-group-container">
+      <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+      </div>
+      <div class="form-group">
+        <label for="phone" class="form-label">Phone</label>
+        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+      </div>
     </div>
-</div>
+    <button class="form-submit" type="submit">Send Message</button>
+  </form>
 
     
 </section>
