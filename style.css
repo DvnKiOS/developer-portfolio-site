@@ -144,6 +144,7 @@ a:hover {
   justify-content: space-around;
   margin: 2.5px;
   background-color: #CD6727;
+  border-radius: 360px;
   
 }
 .logo img {
@@ -175,8 +176,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
+  height: 30px;
   width: 30px;
+  border-radius: 360px;
   cursor: pointer;
 }
 
@@ -356,9 +358,11 @@ section {
   }
   .developer-projects-1{
     display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items: center;
     flex-direction: column;
+    margin-left: 25px;
+    margin-right: 25px;
   } 
   #about{
     display: flex;
@@ -506,6 +510,10 @@ height: auto;
           width: 260px;
           height: 60px;
         }
+
+    footer {
+      padding-top: 25px;
+      }
 
 }
 /* ICONS */
@@ -789,11 +797,11 @@ font-weight: 400;
 
 }
 .project-details-text-container{
-width: 300px;
-font-weight: 400;
-padding-bottom: 35px;
-font-size: 18px;
-padding-top: 35px;
+width: 430px;
+font-weight: 300px;
+font-size: 16px;
+padding: 25px;
+line-height: 1.5rem;
 }
   
 
