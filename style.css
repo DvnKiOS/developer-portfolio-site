@@ -501,7 +501,8 @@ height: auto;
         }
 
         .contact-form  button {
-          width: 60%;
+          width: 260px;
+          height: 60px;
         }
 
 }
@@ -1056,7 +1057,8 @@ margin-bottom: 5px;
 }
 
 .form-submit {
-  width: 25%;
+  width: 260px;
+          height: 60px;
   margin-top: 1.2rem;
   background-color: #CD6727;
   color: whitesmoke;
