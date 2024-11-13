@@ -345,7 +345,7 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   .about-containers, .about-details-container {
     display: flex;           /* Ensure it uses flex layout */
     flex-direction: column-reverse;   /* Stack items vertically */
@@ -373,17 +373,14 @@ section {
     padding-left: 25px;
     padding-right: 25px;
     margin-left: 25px;
-    margin-right: 25px;
+    padding-right: 25px;
+    
     
   } 
   .color-container-2 {
     flex-direction: row;
     display: flex;
-    width: 450px;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 96vw;
-    
+    width: 450px
   }
 
   #about{
@@ -428,6 +425,7 @@ section {
   ;
   margin-top: 50px;
  }
+
   
 
  .text-container p{
