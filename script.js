@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(async (response) => {
                 let json = await response.json();
                 if (response.status === 200) {
-                    showAlert("Form submitted successfully");
+                    showAlert("Message Sent Successfully!");
                 } else {
                     showAlert("Error: " + json.message);
                 }
