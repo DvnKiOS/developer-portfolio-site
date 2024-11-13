@@ -99,7 +99,7 @@
         <br>
         <br>
   <div class="developer-projects-1">
-<div class="color-container">
+<div class="color-container content hidden">
     <div class="mobile-project">
 
         <div class="mobile-project-details">
@@ -198,7 +198,7 @@
 </div>
     </div>
 </div>
-<div class="color-container">
+<div class="color-container content hidden">
   <div class="mobile-project">
 
       <div class="mobile-project-details">
@@ -305,7 +305,7 @@
     
 
   <div class="developer-projects-2">
-    <div class="color-container-2">
+    <!-- <div class="color-container-2">
    
       <img src="assets/rochesterSkyLineWhite.png"
       class="website-project-detail-image">
@@ -351,8 +351,8 @@
     <span class="hover-text">Xcode</span>
   </div>
 </div>
-    </div>
-    <div class="color-container-2">
+    </div> -->
+    <div class="color-container-2 content-2 hidden">
    
       <img src="assets/HeavyMaintenaceTestImagew.png"
       class="website-project-detail-image">
@@ -368,33 +368,33 @@
 <div class="website-tech-stack-section">
   <div class="icon-container">
     <img 
-      src="./assets/swift.png" 
+      src="./assets/html-5 2.png" 
       alt="My LinkedIn profile" 
       class="tech-used-icon" 
 
     />
-    <span class="hover-text">Swift</span>
+    <span class="hover-text">HTML</span>
   </div>
   
  
   <div class="icon-container">
     <img 
-      src="./assets/blueSwiftLogo.png" 
+      src="./assets/css3.png" 
       alt="My GitHub profile" 
       class="tech-used-icon" 
       onclick="location.href='https://github.com/DvnKiOS'"
     />
-    <span class="hover-text">SwiftUI</span>
+    <span class="hover-text">CSS</span>
   </div>
 
   <div class="icon-container">
     <img 
-      src="./assets/xcode-12-96x96_2x.png" 
+      src="./assets/js 2.png" 
       alt="My LinkedIn profile" 
       class="tech-used-icon" 
       onclick="location.href='https://www.linkedin.com/in/devin-k-525b0a222/'"
     />
-    <span class="hover-text">Xcode</span>
+    <span class="hover-text">JavaScript</span>
   </div>
 </div>
     </div>
@@ -433,34 +433,43 @@
     </p>
   </div>
 
-  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  
 
-    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+  <form class="contact-form" method="POST" id="form">
+  
+    <input type="hidden" name="access_key" value="8fde0e5d-ac0d-43b0-97b5-3401c081acd5" />
+    <input type="hidden" name="subject" value="New Contact Form" />
     <input type="hidden" name="from_name" value="My Website" />
-    <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
 
     <div class="form-group-container">
-      <div class="form-group">
-        <label for="name" class="form-label">Name</label>
-        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
-      </div>
-      <div class="form-group">
-        <label for="email" class="form-label">Email</label>
-        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
-      </div>
-      <div class="form-group">
-        <label for="phone" class="form-label">Phone</label>
-        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
-      </div>
-      <div class="form-group">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
-      </div>
-      <button class="form-submit" type="submit">Send Message</button>
+        <!-- Contact Form Fields -->
+        <div class="right-side">
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+            </div>
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+            </div>
+            <button class="form-submit" type="submit">Send Message</button>
+               <div id="result" style="color: #CD6727; font-weight: bold;"></div>
+        </div>
     </div>
-    
-  </form>
+
+</form>
+
+<!-- Result message container for displaying feedback -->
+
+
 
     
 </section>
