@@ -54,19 +54,31 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll(".content-2").forEach((el) => observer.observe(el));
 
 // JavaScript for handling form submission
-const form = document.getElementById('form');
-const result = document.getElementById('result');
-
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form');
-    const result = document.getElementById('result');
+    const form = document.getElementById('form'); 
 
+    // Function to show the custom alert with a specific message
+    function showAlert(message) {
+        const alertBox = document.getElementById('custom-alert');
+        const alertMessage = document.getElementById('alert-message');
+        alertMessage.textContent = message; // Set the alert message
+        alertBox.classList.remove('hidden-alert'); // Show the alert
+    }
+
+    // Function to hide the custom alert
+    window.closeAlert = function () { // Making it a global function to ensure it can be called from HTML
+        const alertBox = document.getElementById('custom-alert');
+        alertBox.classList.add('hidden-alert'); // Hide the alert
+    }
+
+    // Attach form submit handler
     form.addEventListener('submit', function(e) {
         e.preventDefault(); // Prevent default form submission
         const formData = new FormData(form);
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
-        result.innerHTML = "Please wait...";
+
+        showAlert("Please wait..."); // Optional loading message
 
         fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
@@ -79,23 +91,21 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(async (response) => {
                 let json = await response.json();
                 if (response.status === 200) {
-                    result.innerHTML = "Form submitted successfully";
+                    showAlert("Form submitted successfully");
                 } else {
-                    result.innerHTML = json.message;
+                    showAlert("Error: " + json.message);
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
-                result.innerHTML = "Something went wrong!";
+                showAlert("Something went wrong!");
             })
             .finally(() => {
-                form.reset();
-                setTimeout(() => {
-                    result.innerHTML = ""; // Clear message after 3 seconds
-                }, 3000);
+                form.reset(); // Reset the form
             });
     });
 });
+
 
 
 // document.querySelectorAll("content").forEach((el) => observer.observe(el));
