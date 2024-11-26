@@ -475,6 +475,13 @@ align-self: flex-start;
   width: 500px;
   margin-left: 30px;
   margin-right: 30px;
+  display: flex;
+
+    margin-left: 15px; /* Add space from left */
+    margin-right: 15px; /* Add space from right */
+    padding: 10px; /* Optional: Add padding for inner spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
 }
  .mobile-icon-image {
   display: flex;
@@ -559,7 +566,10 @@ height: auto;
   .color-container-2 {
     flex-direction: row;
     display: flex;
-    width: 450px
+    width: 450px;
+    padding: 10px; /* Optional: Add padding for inner spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
   }
 
   #about{
@@ -834,7 +844,7 @@ justify-content: center;
   
 width: 550px;
 height: 550px;
-  transition: all 0.75s ease;
+  transition: all 2.75s ease;
   border-radius: 36px;
 
  
