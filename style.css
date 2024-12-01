@@ -675,9 +675,11 @@ text-align: center;
 width: 125px;
 
 }
-.color-container .project-details-text-container {
+.color-container p {
 width: auto;
-height: auto;
+height:65px;
+font-size: 14px;
+padding: 12px;
 
 
   }
