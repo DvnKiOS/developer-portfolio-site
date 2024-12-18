@@ -562,8 +562,15 @@ height: auto;
     flex-direction: row;
     display: flex;
     width: 450px;
-    box-sizing: border-box;
-    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    
+    
+  }
+  .color-container-2 .website-project-detail-image  {
+    width: 350px;
+    height: 250px;
+    
   }
 
   #about{
@@ -571,6 +578,13 @@ height: auto;
     flex-direction: column-reverse;
     justify-content: center;
     align-content: center;
+  
+  }
+  .website-detail-text {
+    display: flex;
+  text-align: center;
+    flex-direction: column;
+    width: 300px;
   
   }
   #about, .section-container {
@@ -665,6 +679,7 @@ text-align: center;
   width: 400px;
   margin-left: 30px;
   margin-right: 30px;
+  padding-top: 25px;
 }
  .mobile-icon-image {
   display: flex;
