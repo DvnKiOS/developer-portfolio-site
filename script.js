@@ -129,19 +129,51 @@ window.addEventListener('click', (event) => {
   }
 });
 
+// Open the modal based on the hash in the URL
+function checkHashForModal() {
+  if (window.location.hash === '#privacy-notice') {
+      openModal();
+  }
+}
+
+// Function to open the modal
 function openModal() {
   const modal = document.getElementById('privacyModal');
   modal.style.display = 'flex';
-  // Optional: Add a hash to the URL to indicate modal state
-  history.pushState({ modalOpen: true }, '', '#privacy-notice');
+  // Optional: Prevent re-adding the hash if it's already there
+  if (window.location.hash !== '#privacy-notice') {
+      history.pushState({ modalOpen: true }, '', '#privacy-notice');
+  }
 }
 
+// Function to close the modal
 function closeModal() {
   const modal = document.getElementById('privacyModal');
   modal.style.display = 'none';
   // Remove the hash when closing the modal
   history.pushState(null, '', window.location.pathname);
 }
+
+// Close modal on "Escape" key press
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+      closeModal();
+  }
+});
+
+// Handle back/forward browser navigation
+window.addEventListener('popstate', (e) => {
+  const modal = document.getElementById('privacyModal');
+  if (e.state?.modalOpen) {
+      modal.style.display = 'flex';
+  } else {
+      modal.style.display = 'none';
+  }
+});
+
+// Check for the hash on page load
+window.addEventListener('DOMContentLoaded', checkHashForModal);
+
 
 
 // Add event listener to the button to call openPrivacyModal on click
