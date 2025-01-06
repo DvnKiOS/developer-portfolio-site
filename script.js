@@ -1,169 +1,105 @@
+// Toggle the menu open/close
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
 }
 
-
-
-
-
+// Image cycling functionality
 let currentImageIndex = 0;
-
 function cycleImages() {
-    // Get all images within mobile-project-details
-    const images = document.querySelectorAll('.mobile-project-details .mobile-project-image');
-
-    // Remove 'active' from all images
-    images.forEach(image => image.classList.remove('active'));
-
-    // Increment index and reset if at the end
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-
-    // Set the next image to active
-    images[currentImageIndex].classList.add('active');
+  const images = document.querySelectorAll('.mobile-project-details .mobile-project-image');
+  images.forEach(image => image.classList.remove('active'));
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images[currentImageIndex].classList.add('active');
 }
 
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add(visible)
-//         }
-//     })
-// })
-// JavaScript using Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
+// Intersection Observer setup
+const createObserver = (className, visibleClass) => {
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add(visibleClass);
+          }
+      });
   });
-  
 
-  const observerTwo = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible-2");
-      }
-    });
-  });
-  
-  document.querySelectorAll(".content").forEach((el) => observer.observe(el));
-  document.querySelectorAll(".content-2").forEach((el) => observer.observe(el));
+  const elements = document.querySelectorAll(className);
+  elements.forEach((el) => observer.observe(el));
+};
 
-// JavaScript for handling form submission
+// Observers for specific classes
+createObserver('.content', 'visible');
+createObserver('.content-2', 'visible-2');
+
+// Handle form submission and custom alert
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form'); 
+  const form = document.getElementById('form');
 
-    // Function to show the custom alert with a specific message
-    function showAlert(message) {
-        const alertBox = document.getElementById('custom-alert');
-        const alertMessage = document.getElementById('alert-message');
-        alertMessage.textContent = message; // Set the alert message
-        alertBox.classList.remove('hidden-alert'); // Show the alert
-    }
+  function showAlert(message) {
+      const alertBox = document.getElementById('custom-alert');
+      const alertMessage = document.getElementById('alert-message');
+      alertMessage.textContent = message;
+      alertBox.classList.remove('hidden-alert');
+  }
 
-    // Function to hide the custom alert
-    window.closeAlert = function () { // Making it a global function to ensure it can be called from HTML
-        const alertBox = document.getElementById('custom-alert');
-        alertBox.classList.add('hidden-alert'); // Hide the alert
-    }
+  window.closeAlert = function () {
+      const alertBox = document.getElementById('custom-alert');
+      alertBox.classList.add('hidden-alert');
+  };
 
-    // Attach form submit handler
-    form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent default form submission
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+  form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-        showAlert("Please wait..."); // Optional loading message
+      showAlert("Please wait...");
 
-        fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status === 200) {
-                    showAlert("Message Sent Successfully!");
-                } else {
-                    showAlert("Error: " + json.message);
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                showAlert("Something went wrong!");
-            })
-            .finally(() => {
-                form.reset(); // Reset the form
-            });
-    });
+      fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: json
+      })
+      .then(async (response) => {
+          const jsonResponse = await response.json();
+          if (response.status === 200) {
+              showAlert("Message Sent Successfully!");
+          } else {
+              showAlert("Error: " + jsonResponse.message);
+          }
+      })
+      .catch(error => {
+          console.error("Error:", error);
+          showAlert("Something went wrong!");
+      })
+      .finally(() => {
+          form.reset();
+      });
+  });
 });
 
-
-// Get modal elements
+// Modal handling
 const modal = document.getElementById('privacyModal');
 const openModalButton = document.getElementById('openModalButton');
 const closeButton = document.querySelector('.close-button');
 
-// Open modal when button is clicked
-openModalButton.addEventListener('click', () => {
-  modal.style.display = 'flex';
-});
+openModalButton.addEventListener('click', openModal);
+closeButton.addEventListener('click', closeModal);
 
-// Close modal when the "X" button is clicked
-closeButton.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// Close modal when clicking outside the content
 window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
+  if (event.target === modal) closeModal();
 });
 
-// Open the modal based on the hash in the URL
-function checkHashForModal() {
-  if (window.location.hash === '#privacy-notice') {
-      openModal();
-  }
-}
-
-// Function to open the modal
-function openModal() {
-  const modal = document.getElementById('privacyModal');
-  modal.style.display = 'flex';
-  // Optional: Prevent re-adding the hash if it's already there
-  if (window.location.hash !== '#privacy-notice') {
-      history.pushState({ modalOpen: true }, '', '#privacy-notice');
-  }
-}
-
-// Function to close the modal
-function closeModal() {
-  const modal = document.getElementById('privacyModal');
-  modal.style.display = 'none';
-  // Remove the hash when closing the modal
-  history.pushState(null, '', window.location.pathname);
-}
-
-// Close modal on "Escape" key press
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-      closeModal();
-  }
+  if (e.key === 'Escape') closeModal();
 });
 
-// Handle back/forward browser navigation
 window.addEventListener('popstate', (e) => {
-  const modal = document.getElementById('privacyModal');
   if (e.state?.modalOpen) {
       modal.style.display = 'flex';
   } else {
@@ -171,16 +107,31 @@ window.addEventListener('popstate', (e) => {
   }
 });
 
-// Check for the hash on page load
+function checkHashForModal() {
+  if (window.location.hash === '#privacy-notice') {
+      openModal();
+  }
+}
+
+function openModal() {
+  modal.style.display = 'flex';
+  if (window.location.hash !== '#privacy-notice') {
+      history.pushState({ modalOpen: true }, '', '#privacy-notice');
+  }
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+  history.pushState(null, '', window.location.pathname);
+}
+
 window.addEventListener('DOMContentLoaded', checkHashForModal);
 
+// Dynamic modal loading functionality
+document.getElementById('privacyButton').addEventListener('click', loadModal);
 
-
-// Add event listener to the button to call openPrivacyModal on click
-document.getElementById('privacyButton').addEventListener('click', openPrivacyModal);
-// Function to load the modal dynamically
 function loadModal() {
-  const modalContainer = document.createElement('div'); // Container for modal
+  const modalContainer = document.createElement('div');
   modalContainer.id = 'modalContainer';
   document.body.appendChild(modalContainer);
 
@@ -188,27 +139,17 @@ function loadModal() {
       .then((response) => response.text())
       .then((html) => {
           modalContainer.innerHTML = html;
-          attachModalEvents(); // Attach event listeners for modal
+          attachModalEvents();
       })
       .catch((error) => console.error('Error loading modal:', error));
 }
 
-
 function attachModalEvents() {
   const modal = document.getElementById('privacyModal');
   const closeButton = modal.querySelector('.close-btn');
+  window.openModal = function () { modal.style.display = 'flex'; };
+  window.closeModal = function () { modal.style.display = 'none'; };
 
-  // Open modal
-  window.openModal = function () {
-      modal.style.display = 'flex';
-  };
-
-  // Close modal
-  window.closeModal = function () {
-      modal.style.display = 'none';
-  };
-
-  // Close modal on outside click
   window.addEventListener('click', (event) => {
       if (event.target === modal) {
           closeModal();
@@ -216,10 +157,6 @@ function attachModalEvents() {
   });
 }
 
-// Initialize modal on page load
-document.addEventListener('DOMContentLoaded', loadModal);
-
-// document.querySelectorAll("content").forEach((el) => observer.observe(el));
-
-// Testing connection (you can remove this once confirmed working)
-
+// Observing content for visibility
+document.querySelectorAll(".content").forEach((el) => observer.observe(el));
+document.querySelectorAll(".content-2").forEach((el) => observer.observe(el));

@@ -1108,24 +1108,26 @@ article .icon {
 }
 .content {
   opacity: 0;
-  transform: translate(50px);
+  transform: translateX(50px); /* Move horizontally */
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
+
 .content-2 {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(50px); /* Move vertically */
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
-.content.visible{
-  animation-delay: 100ms;
+
+.content.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0); /* Bring content back into view */
 }
-.content-2.visible{
-  animation-delay: 100ms;
+
+.content-2.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0); /* Bring content-2 back into view */
 }
+
 
 .project-tech-used {
   display: flex;
