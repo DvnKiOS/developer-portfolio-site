@@ -130,11 +130,17 @@ window.addEventListener('click', (event) => {
 });
 
 function openModal() {
-  document.getElementById('privacyModal').style.display = 'flex'; // Correct ID
+  const modal = document.getElementById('privacyModal');
+  modal.style.display = 'flex';
+  // Optional: Add a hash to the URL to indicate modal state
+  history.pushState({ modalOpen: true }, '', '#privacy-notice');
 }
 
 function closeModal() {
-  document.getElementById('privacyModal').style.display = 'none'; // Correct ID
+  const modal = document.getElementById('privacyModal');
+  modal.style.display = 'none';
+  // Remove the hash when closing the modal
+  history.pushState(null, '', window.location.pathname);
 }
 
 

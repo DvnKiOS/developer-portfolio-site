@@ -40,6 +40,7 @@
 
 .modal h1, .modal h2, .modal h3 {
     color: #444;
+    text-align: start;
 }
 .modal a {
     color: #CD6727;
