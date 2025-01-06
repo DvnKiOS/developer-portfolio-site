@@ -423,7 +423,6 @@ section {
   font-size: auto
   ;
   margin-top: 50px;
-  text-align: center;
  }
 
   
@@ -1093,8 +1092,7 @@ article .icon {
 
 #projects {
   position: relative;
- 
-  height: 85vh;
+  height: 96vh;
   justify-content: center;
   align-items: center;
 
@@ -1107,31 +1105,26 @@ article .icon {
   justify-content: center;
   align-items: center;
 }
-.content, .content-2 {
+.content {
 
-  transform: translateX(50px); /* Move horizontally for .content */
-  transition: opacity 2.0s ease-out, transform 1.5s ease-out, visibility 0s linear 1.5s;
+  transform: translate(50px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
-
 .content-2 {
-  transform: translateY(50px); /* Move vertically for .content-2 */
-}
 
-.content.visible, .content-2.visible-2 {
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+.content.visible{
+  animation-delay: 100ms;
   opacity: 1;
-  visibility: visible;
+  transform: translateY(0);
 }
-
-.content.visible {
-  transform: translateX(0); /* Reset transform for .content */
+.content-2.visible{
+  animation-delay: 100ms;
+  opacity: 1;
+  transform: translateX(0);
 }
-
-.content-2.visible-2 {
-  transform: translateY(0); /* Reset transform for .content-2 */
-}
-
-
-
 
 .project-tech-used {
   display: flex;
@@ -1140,7 +1133,7 @@ article .icon {
 .color-container {
   display: flex;
   background-color: white;
-
+justify-content: center;
   border-radius: 35px;
   border-color: #38393E;
 
@@ -1217,15 +1210,15 @@ justify-content: center;
 
 }
 .project-tech-stack img {
-  height: 60px;
+  height: 65px;
   width: auto;
 }
 .project-tech-stack p {
-  width: 450px;
+  width: 300px;
   height: auto;
-  font-weight: 350;
- 
-  padding: 15px;
+  font-weight: 400;
+  font-family: 14;
+  padding: 25px;
 }
 
 .mobile-icon-image{
@@ -1302,6 +1295,10 @@ display: flex;
   margin-top: 1rem;
   text-align: center;
   font-weight: 300;
+  font-size: 18px;
+}
+.contact-intro title {
+
 }
 
 .contact-title {
@@ -1418,8 +1415,20 @@ height: 60px;
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  height: 10vh;
+ 
+gap: 5rem;
+  border-radius:  12px;
+
+  margin: 25px;
+}
+  
+footer .footer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
 }
 
 footer p {
@@ -1444,7 +1453,6 @@ footer p {
   width: 250px;
   display: flex;
   text-align: start;
-  padding: 65px;
  
   
 }
