@@ -16,6 +16,7 @@ function cycleImages() {
 }
 
 // Intersection Observer setup
+// Create a new IntersectionObserver instance
 const createObserver = (className, visibleClass) => {
   const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -23,7 +24,7 @@ const createObserver = (className, visibleClass) => {
               entry.target.classList.add(visibleClass);
           }
       });
-  });
+  }, { threshold: 0.5 }); // Adjust threshold if needed
 
   const elements = document.querySelectorAll(className);
   elements.forEach((el) => observer.observe(el));
@@ -32,6 +33,7 @@ const createObserver = (className, visibleClass) => {
 // Observers for specific classes
 createObserver('.content', 'visible');
 createObserver('.content-2', 'visible-2');
+
 
 // Handle form submission and custom alert
 document.addEventListener('DOMContentLoaded', function () {
