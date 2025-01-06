@@ -107,6 +107,79 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Get modal elements
+const modal = document.getElementById('privacyModal');
+const openModalButton = document.getElementById('openModalButton');
+const closeButton = document.querySelector('.close-button');
+
+// Open modal when button is clicked
+openModalButton.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+
+// Close modal when the "X" button is clicked
+closeButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the content
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+function openModal() {
+  document.getElementById('privacyModal').style.display = 'flex'; // Correct ID
+}
+
+function closeModal() {
+  document.getElementById('privacyModal').style.display = 'none'; // Correct ID
+}
+
+
+// Add event listener to the button to call openPrivacyModal on click
+document.getElementById('privacyButton').addEventListener('click', openPrivacyModal);
+// Function to load the modal dynamically
+function loadModal() {
+  const modalContainer = document.createElement('div'); // Container for modal
+  modalContainer.id = 'modalContainer';
+  document.body.appendChild(modalContainer);
+
+  fetch('modal.html')
+      .then((response) => response.text())
+      .then((html) => {
+          modalContainer.innerHTML = html;
+          attachModalEvents(); // Attach event listeners for modal
+      })
+      .catch((error) => console.error('Error loading modal:', error));
+}
+
+// Function to attach modal open/close functionality
+function attachModalEvents() {
+  const modal = document.getElementById('privacyModal');
+  const closeButton = modal.querySelector('.close-btn');
+
+  // Open modal
+  window.openModal = function () {
+      modal.style.display = 'flex';
+  };
+
+  // Close modal
+  window.closeModal = function () {
+      modal.style.display = 'none';
+  };
+
+  // Close modal on outside click
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          closeModal();
+      }
+  });
+}
+
+// Initialize modal on page load
+document.addEventListener('DOMContentLoaded', loadModal);
 
 // document.querySelectorAll("content").forEach((el) => observer.observe(el));
 

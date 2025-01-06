@@ -494,9 +494,44 @@
     
 </section>
 <footer>
-   
-    <p>Copyright &#169; 2024 DvnCodes All Rights Reserved</p>
+  <p>Copyright &#169; 2024 DvnCodes All Rights Reserved</p>
+ 
+
+    <!-- Placeholder for the Modal -->
+    <div id="modal-container"></div>
+
+    <script>
+        // Load the modal HTML into the placeholder
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch('modal.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('modal-container').innerHTML = data;
+                });
+        });
+
+        // Modal Functions
+        function openModal() {
+            const modal = document.getElementById('privacyModal');
+            modal.style.display = 'flex';
+            window.location.hash = 'privacy-notice'; 
+            history.pushState("", document.title, window.location.pathname); 
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('privacyModal');
+            modal.style.display = 'none';
+        }
+
+        // Close Modal with Escape Key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </footer>
+
 <script src="script.js"> </script>    
 </body>
 </html>

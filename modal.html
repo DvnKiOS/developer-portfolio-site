@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="modalstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Notice Modal</title>
+  
+</head>
+<body>
+    <!-- Modal Trigger -->
+    <p class ="privacy-button" onclick="openModal()">Data Usage & Privacy Notice</p>
+
+
+    <!-- Modal -->
+    <div id="privacyModal" class="modal-overlay" style="display: none;">
+        <div class="modal">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h1>Privacy Notice</h1>
+
+            <h2>Panacea: PTCB Prep</h2>
+            <p>Panacea: PTCB Prep does not collect, store, or share any user data. All information and progress within the app is stored directly on your device. Once you delete the application, all related data is removed from your device. The app is designed to serve as a temporary study tool, and we encourage you to uninstall it once you have successfully passed the PTCB exam.</p>
+
+            <h2>MarkMate</h2>
+            <p>MarkMate requires users to create an account to access its features for editing and storing images. Account information is securely stored in Google Firebase. Images edited or stored using the app are saved either in Firebase or on your device’s native storage, based on your usage.</p>
+            <p>We are committed to protecting your data, and any user data stored in Firebase is managed with strict security protocols.</p>
+
+            <h2>Data Use</h2>
+
+            <h3>Panacea: PTCB Prep</h3>
+            <p>Panacea: PTCB Prep uses Google services for advertisements. Any data collection or tracking that occurs is managed solely by Google for ad personalization and delivery. Dvn does not store or have access to any personal data used for advertisements.</p>
+
+            <h3>MarkMate</h3>
+            <p>MarkMate uses Google services for both account management and advertisements. Any additional data collected by Google is used for ad personalization and delivery. Dvn does not collect or access data beyond what is necessary for account creation, app functionality, and image storage.</p>
+
+            <p><strong>Note:</strong> For more information about how Google uses your data, please review their privacy policies:</p>
+            <p><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
