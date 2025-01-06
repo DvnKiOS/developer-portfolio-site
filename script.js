@@ -193,7 +193,7 @@ function loadModal() {
       .catch((error) => console.error('Error loading modal:', error));
 }
 
-// Function to attach modal open/close functionality
+
 function attachModalEvents() {
   const modal = document.getElementById('privacyModal');
   const closeButton = modal.querySelector('.close-btn');

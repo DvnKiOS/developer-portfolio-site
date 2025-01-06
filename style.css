@@ -1428,4 +1428,15 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding: 25px;
+  text-align: start;
+
 }
+.modal-container p {
+  width: 250px;
+  display: flex;
+  text-align: start;
+ 
+  
+}
+

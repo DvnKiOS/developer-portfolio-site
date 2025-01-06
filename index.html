@@ -502,36 +502,61 @@
 
     <script>
         // Load the modal HTML into the placeholder
-        window.addEventListener('DOMContentLoaded', () => {
-            fetch('modal.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('modal-container').innerHTML = data;
-                });
+       // Function to load modal HTML into the placeholder
+window.addEventListener('DOMContentLoaded', () => {
+    fetch('modal.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('modal-container').innerHTML = data;
+            checkHashForModal();  // Check if the hash is #privacy-notice after content loads
         });
+});
 
-        // Modal Functions
-        function openModal() {
-            const modal = document.getElementById('privacyModal');
-            modal.style.display = 'flex';
-            window.location.hash = 'privacy-notice'; 
-            history.pushState("", document.title, window.location.pathname); 
-        }
+// Function to check if the hash is #privacy-notice and open the modal
+function checkHashForModal() {
+    if (window.location.hash === '#privacy-notice') {
+        openModal();
+    }
+}
 
-        function closeModal() {
-            const modal = document.getElementById('privacyModal');
-            modal.style.display = 'none';
-        }
+// Modal Functions
+function openModal() {
+    const modal = document.getElementById('privacyModal');
+    if (modal) {
+        modal.style.display = 'flex'; // Show the modal
+    }
+    window.location.hash = 'privacy-notice';  // Update the hash to indicate the modal is open
+    history.pushState("", document.title, window.location.pathname); // Remove hash from URL for cleaner navigation
+}
 
-        // Close Modal with Escape Key
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
+function closeModal() {
+    const modal = document.getElementById('privacyModal');
+    if (modal) {
+        modal.style.display = 'none'; // Hide the modal
+    }
+}
+
+// Close Modal with Escape Key
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Close Modal if clicked outside the modal (on the modal container)
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('privacyModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// Listen for hash changes to check if the user navigates to #privacy-notice
+window.addEventListener('hashchange', checkHashForModal);
+
     </script>
 </footer>
 
-<script src="script.js"> </script>    
+  
 </body>
 </html>

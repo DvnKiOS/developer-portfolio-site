@@ -1,3 +1,4 @@
+/* Modal Overlay (background layer) */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -5,50 +6,39 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: none; /* Hidden by default */
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 9999; /* Ensure it's above other content */
 }
+
+/* Modal Box */
 .modal {
     background-color: white;
     width: 80%;
     max-width: 800px;
-    height: 80%;
     padding: 25px;
     overflow-y: auto;
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: start;
-    gap: 1rem;
+    position: relative;
     display: flex;
-}
-.modal p {
-   text-align: start;
+    flex-direction: column;
 }
 
-.privacy-button {
-    font-weight: bold; /* Makes the text bold */
-    cursor: pointer; /* Indicates it's clickable */
-}
-
-.privacy-button:hover{
-    text-decoration: underline; /* Adds underline on hover */
-    text-decoration-color: #CD6727;
-}
-
-
+/* Title and text styling inside modal */
 .modal h1, .modal h2, .modal h3 {
     color: #444;
     text-align: start;
+ 
 }
-.modal a {
-    color: #CD6727;
-    text-decoration: none;
+
+.modal p {
+    text-align: start;
+    ;
 }
-.modal a:hover {
-    text-decoration: underline;
-}
+
+/* Close button */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -58,6 +48,43 @@
     color: #CD6727;
     cursor: pointer;
 }
+
 .close-btn:hover {
     color: #444;
+}
+
+/* Privacy Button Styling */
+.privacy-button {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.privacy-button:hover {
+    text-decoration: underline;
+    text-decoration-color: #CD6727;
+}
+
+/* Modal Links */
+.modal a {
+    color: #CD6727;
+    text-decoration: none;
+}
+
+.modal a:hover {
+    text-decoration: underline;
+}
+
+/* Add visible class for fade-in animation or transitions if required */
+.modal.visible {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Optional Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
