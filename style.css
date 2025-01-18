@@ -1398,16 +1398,16 @@ height: 60px;
 }
 
 /* Modal Styling */
-/* .modal {
-  /* display: flex;
+.modal {
+   display: flex;
   width: 80%;
   height: 90%;
-  flex-direction: column; */
+  flex-direction: column; 
   
+}
 
 
-
-/* Modal Content */
+/* Modal Content
 
 
 
@@ -1439,7 +1439,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 25px;
+
   text-align: start;
 
 }
