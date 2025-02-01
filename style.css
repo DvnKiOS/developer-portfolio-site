@@ -273,7 +273,7 @@ section {
 
 }
 .profile-picture{
-  border-radius: 2rem;
+  border-radius: 360px;
 }
 
 .section__pic-container {
@@ -411,7 +411,7 @@ section {
   
 
  .section-container .about-pic {
- width: 275px;
+ width: 325px;
   height: 325px;
   
 
@@ -1064,6 +1064,7 @@ justify-content: center;
   width: 30px;
   height: 30px;
   padding: 15px;
+  cursor: pointer;
 }
 
 
