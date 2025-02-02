@@ -260,6 +260,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 10px;
 
 }
 
@@ -334,8 +335,9 @@ section {
 .title {
   font-size: 1.5rem;
   align-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
+
 
 }
 
@@ -345,23 +347,13 @@ section {
  
 }
 @media screen and (max-width: 900px) {
-  .about-containers, .about-details-container {
-    display: flex;           /* Ensure it uses flex layout */
-    flex-direction: column-reverse;   /* Stack items vertically */
-    align-items: center;      /* Center items horizontally */
-       padding-bottom: 15px;
-    justify-content: space-evenly;    
-    justify-content: center;       /* Take full width of the screen */
-               /* Optional: Set max width for better readability */
-
-  }
+ 
   .developer-projects-1{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     flex-direction: column;
-    padding-left: 25px;
-    padding-right: 25px;
+  
 
   } 
   .developer-projects-2{
@@ -376,10 +368,16 @@ section {
     
     
   } 
+  .section-container .about-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 360%;
+    
+  }
   .color-container-2 {
     flex-direction: row;
     display: flex;
-    width: 450px
+    
   }
 
   #about{
@@ -410,15 +408,7 @@ section {
   }
   
 
- .section-container .about-pic {
- width: 325px;
-  height: 325px;
-  
 
- 
- 
-  
- }
 #projects h1 {
   font-size: auto
   ;
@@ -526,15 +516,13 @@ height: auto;
       }
 
 }
-@media screen and (max-width: 300px) {
-  .about-containers, .about-details-container {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-bottom: 15px;
-    justify-content: center;
-  }
-
+/* @media screen and (max-width: 400px) {
+ 
+.section-container, .about-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 360%
+}
   .developer-projects-1,
   .developer-projects-2 {
     display: flex;
@@ -566,8 +554,8 @@ height: auto;
   #about {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+   
+    
   }
 
   .website-detail-text {
@@ -576,11 +564,11 @@ height: auto;
     text-align: center;
     max-width: 300px;
   }
-
-  #about, .section-container {
-    justify-content: center;
-    align-items: center;
+  .about-me-text{
+    font: 14px;
   }
+
+  
 
   .section__pic-container {
     display: flex;
@@ -594,8 +582,9 @@ height: auto;
   }
 
   .section-container .about-pic {
-    width: 275px;
-    height: 325px;
+    width: 200px;
+    height: 200px;
+    border-radius: 360%;
   }
 
   #projects h1 {
@@ -620,7 +609,7 @@ height: auto;
   .about-text-container p {
     max-width: 100%;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     text-align: center;
   }
@@ -632,18 +621,15 @@ height: auto;
     background-color: #CD6727;
   }
 
-  .color-container {
-    display: flex;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 30px;
-    padding-top: 25px;
-  }
+  
 
   .mobile-icon-image {
     display: flex;
     width: 35px;
     height: 35px;
+  }
+  .color-container {
+    width: auto;
   }
 
   .color-container .mobile-project-image {
@@ -651,8 +637,8 @@ height: auto;
   }
 
   .color-container p {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1;
     text-align: center;
   }
 
@@ -661,32 +647,14 @@ height: auto;
     height: 45px;
   }
 
-  .color-container .project-icon {
-    width: 105px;
-    height: 50px;
-  }
+ 
 
-  .contact-form {
-    width: 100%;
-  }
-
-  .contact-form .form-group-container {
-    width: 85%;
-  }
-
-  .contact-form .form-group {
-    max-width: 400px;
-  }
-
-  .contact-form button {
-    width: 260px;
-    height: 60px;
-  }
+ 
 
   footer {
     padding-top: 25px;
   }
-}
+} */
 /* ICONS */
 
 .icon {
@@ -823,7 +791,7 @@ height: 550px;
   justify-content: center;
   align-items: center;
 
-
+flex-direction: column;
   height: auto;
   max-width: 800px;
 text-align: center;
@@ -831,10 +799,11 @@ text-align: center;
 }
 .about-text-container p {
 max-width: 700px;
-height: 250px;
+height: auto;
 font-weight: 300;
-font-size: 18px;
+
 line-height: 1.75;
+gap: 1rem;
 }
 .left-side {
     display: flex ;
@@ -1034,7 +1003,7 @@ font-weight: 400;
 width: 430px;
 font-weight: 300px;
 font-size: 16px;
-padding: 25px;
+
 line-height: 1.5rem;
 }
 .website-title {
@@ -1194,13 +1163,18 @@ flex-direction: column;
   transition: opacity 0.5s ease-in-out;
   height: auto;
 
-  padding: 25px;
+  
 }
 
 .mobile-project-image.active {
   display: block; /* Only show the active image */
 }
+.developer-projects-container{
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 
+}
 
 
 .project-tech-stack{
@@ -1215,11 +1189,11 @@ justify-content: center;
   width: auto;
 }
 .project-tech-stack p {
-  width: 300px;
+  width: 250px;
   height: auto;
-  font-weight: 400;
-  font-family: 14;
-  padding: 25px;
+  font-weight: 300;
+ 
+  padding: 15px;
 }
 
 .mobile-icon-image{
@@ -1275,9 +1249,10 @@ display: flex;
 
 #contact {
   display: flex;
-  justify-content: center;
+  
   flex-direction: column;
   height: 96vh;
+  align-items: center;
 
 
 }
@@ -1289,18 +1264,22 @@ display: flex;
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 3rem 1rem;
+
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-intro > * + * {
+.contact-intro{
   margin-top: 1rem;
   text-align: center;
   font-weight: 300;
   font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  width: 200px
+  
 }
-.contact-intro title {
 
-}
 
 .contact-title {
   font-size: 1.875rem;
@@ -1310,6 +1289,7 @@ display: flex;
 
 .contact-description {
   color: rgb(107 114 128);
+  justify-content: center;
 }
 
 .form-group-container {
