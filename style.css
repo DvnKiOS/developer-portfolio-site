@@ -163,84 +163,45 @@ a:hover {
 
 /* HAMBURGER MENU */
 
-#hamburger-nav {
-  display: none;
+.menu-links {
+  display: none; /* Hide menu by default */
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust based on your layout */
+  right: 20px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
+.menu-links.open {
+  display: flex; /* Show menu when toggled */
 }
 
 .hamburger-icon {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 30px;
-  width: 30px;
-  border-radius: 360px;
   cursor: pointer;
 }
 
 .hamburger-icon span {
-  width: 100%;
-  height: 4px;
-  background-color: #CD6727;
-  transition: all 0.3 ease-in-out;
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 5px 0;
+  transition: 0.3s;
 }
 
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color:whitesmoke;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
-  border-radius: 15px;
+/* Animate the icon when menu is open */
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-  list-style: none;
-}
-
-.menu-links.open {
-  max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
 }
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* SECTIONS */
@@ -261,6 +222,7 @@ section {
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
+  gap: 5rem;
 
 }
 
@@ -279,10 +241,11 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
+  height: 96vh;
 
   margin: auto 0;
   border-radius: 2rem;
+  justify-content: ce;
   
   
 }
@@ -347,6 +310,23 @@ section {
  
 }
 @media screen and (max-width: 900px) {
+  
+  #desktop-nav {
+    display: none; /* Hide desktop navigation */
+  }
+
+  #hamburger-nav {
+    display: flex; /* Show the hamburger menu */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: whitesmoke;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+  
  
   .developer-projects-1{
     display: flex;
@@ -369,8 +349,8 @@ section {
     
   } 
   .section-container .about-pic {
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     border-radius: 360%;
     
   }
@@ -461,12 +441,13 @@ align-self: flex-start;
 }
 
 .color-container {
-  display: flex;
-  width: 500px;
-  margin-left: 30px;
-  margin-right: 30px;
-  box-sizing: border-box;
-  padding: 0 20px;
+  display: flexbox;
+  width: 450px;
+  justify-content: center;
+  align-items: center;
+ 
+  
+ 
 }
  .mobile-icon-image {
   display: flex;
@@ -746,10 +727,10 @@ height: auto;
 }
 
 .about-details-container {
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  
   align-items: center;
+  height: 50vh;
 }
 
 .about-containers,
@@ -761,9 +742,9 @@ height: auto;
 /* Container styling */
 .section__pic-container {
   position: relative;
-  
-
-  justify-content: center;
+  display: flex;
+  height: 60vh;
+  justify-content: flex-end;
   align-items: center;
  
 }
@@ -771,10 +752,10 @@ height: auto;
 /* Base styling for all images */
 .about-pic {
   
-width: 500px;
-height: 550px;
+width: 400px;
+height: 400px;
   transition: all 2.75s ease;
-  border-radius: 36px;
+  border-radius: 360%;
 
  
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
@@ -1170,7 +1151,7 @@ flex-direction: column;
   display: block; /* Only show the active image */
 }
 .developer-projects-container{
-  width: 100%;
+  
   justify-content: space-evenly;
   align-items: center;
 

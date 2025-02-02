@@ -1,9 +1,10 @@
 // Toggle the menu open/close
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const menu = document.querySelector("menu-links");
+  const icon = document.querySelector("hamburger-icon");
+
+  menu.classList.toggle("open"); // Show or hide menu
+  icon.classList.toggle("open"); // Animate the icon
 }
 
 // Image cycling functionality
@@ -162,3 +163,12 @@ function attachModalEvents() {
 // Observing content for visibility
 document.querySelectorAll(".content").forEach((el) => observer.observe(el));
 document.querySelectorAll(".content-2").forEach((el) => observer.observe(el));
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+  const menuLinks = document.querySelector(".menu-links");
+
+  hamburgerIcon.addEventListener("click", function () {
+    menuLinks.classList.toggle("open");
+    this.classList.toggle("open"); // Animate the icon
+  });
+});
