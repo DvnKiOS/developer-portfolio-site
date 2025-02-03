@@ -221,8 +221,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
-  gap: 5rem;
+
 
 }
 
@@ -701,6 +700,7 @@ height: auto;
   border: rgb(255, 255, 255) 0.1rem solid;
   background: #38393E;
   color: #CD6727;
+  cursor: pointer;
 }
 
 .btn-container {
@@ -713,11 +713,9 @@ height: auto;
   position: relative;
   justify-content: space-evenly;
   align-content: center;
+  height: 96vh;
 }
-.hero-section-text {
-  width: 700px;
 
-}
 
 .about-containers {
 
@@ -730,7 +728,7 @@ height: auto;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  height: 50vh;
+ 
 }
 
 .about-containers,
@@ -743,7 +741,7 @@ height: auto;
 .section__pic-container {
   position: relative;
   display: flex;
-  height: 60vh;
+  
  
   align-items: center;
  
@@ -1042,9 +1040,10 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
+  /* display: flex; */
   position: relative;
   height: 96vh;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   
@@ -1154,6 +1153,7 @@ flex-direction: column;
   
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
 
 }
 
