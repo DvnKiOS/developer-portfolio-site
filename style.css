@@ -213,6 +213,7 @@ section {
   box-sizing: border-box;
   min-height: fit-content;
   width: auto;
+  display: flex;
 
 }
 
@@ -1043,7 +1044,7 @@ article .icon {
   /* display: flex; */
   position: relative;
   height: 96vh;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 
   
@@ -1057,7 +1058,7 @@ article .icon {
 }
 .content {
 
-  transform: translate(50px);
+
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 .content-2 {
