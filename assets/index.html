@@ -921,7 +921,7 @@
                 <div class="apps-grid">
                     <div class="app-card">
                         <div class="app-image">
-                            <img src="iTunesArtwork@1x.png"Qid: Habit & Routine Tracker">
+                            <img src="iTunesArtwork@1x.png" alt="Habidion: Habit & Routine Tracker">
                         </div>
                         <div class="app-content">
                             <h3>Habidion: Habit & Routine Tracker</h3>
@@ -949,6 +949,16 @@
                             <a href="#" class="app-link" data-app="markmate">View Details →</a>
                         </div>
                     </div>
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/8d/4c/7c8d4c8b-9d7a-3d3c-5e5f-5a5a5a5a5a5a/AppIcon-0-0-1x_U007epad-0-0-0-0-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.webp" alt="Pantry Inventory: ChefMate">
+                        </div>
+                        <div class="app-content">
+                            <h3>Pantry Inventory: ChefMate</h3>
+                            <p>Effortlessly manage your pantry, track food inventory, and reduce waste with ChefMate.</p>
+                            <a href="#" class="app-link" data-app="chefmate">View Details →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -958,7 +968,7 @@
             <div class="container">
                 <h2 class="title">Get in Touch</h2>
                 <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">Interested in working with us? Fill out the form below and we'll get back to you as soon as possible.</p>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -1439,6 +1449,155 @@
         </div>
     </section>
 
+    <!-- ChefMate App Detail Page -->
+    <section class="app-detail" id="chefmate-detail">
+        <div class="app-detail-container">
+            <button class="back-button" onclick="hideAppDetail()">
+                <i class="fas fa-arrow-left"></i> Back to Homepage
+            </button>
+            
+            <div class="app-detail-header">
+                <div class="app-header-content">
+                    <div class="app-icon">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/8d/4c/7c8d4c8b-9d7a-3d3c-5e5f-5a5a5a5a5a5a/AppIcon-0-0-1x_U007epad-0-0-0-0-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.webp" alt="ChefMate App Icon">
+                    </div>
+                    <div class="app-header-info">
+                        <h1 class="app-title">Pantry Inventory: ChefMate</h1>
+                        <p class="app-developer">Akron Bay</p>
+                        <div>
+                            <a href="https://apps.apple.com/us/app/pantry-inventory-chefmate/id6742667770" class="app-get-btn">Download</a>
+                            <button class="privacy-btn" onclick="showPrivacyNotice('chefmate')">Privacy Notice</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="app-screenshots">
+                    <div class="screenshots-container">
+                        <div class="screenshot">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7c/8d/4c/7c8d4c8b-9d7a-3d3c-5e5f-5a5a5a5a5a5a/0e9b9b9b-9b9b-9b9b-9b9b-9b9b9b9b9b9b.png/392x696bb.png" alt="ChefMate Screenshot 1">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7c/8d/4c/7c8d4c8b-9d7a-3d3c-5e5f-5a5a5a5a5a5a/1e9b9b9b-9b9b-9b9b-9b9b-9b9b9b9b9b9b.png/392x696bb.png" alt="ChefMate Screenshot 2">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7c/8d/4c/7c8d4c8b-9d7a-3d3c-5e5f-5a5a5a5a5a5a/2e9b9b9b-9b9b-9b9b-9b9b-9b9b9b9b9b9b.png/392x696bb.png" alt="ChefMate Screenshot 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-detail-section">
+                <h2 class="section-title">Description</h2>
+                <p class="app-description">
+                    ChefMate helps you effortlessly manage your pantry, track food inventory, and reduce waste. 
+                    With intuitive features like expiration date tracking, shopping lists, and recipe suggestions based on what you have, 
+                    ChefMate makes kitchen management simple and efficient.
+                </p>
+                
+                <div class="ratings-container">
+                    <div class="rating-value">4.6</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <div class="rating-count">94 Ratings</div>
+                </div>
+            </div>
+            
+            <div class="app-detail-section">
+                <h2 class="section-title">What's New</h2>
+                <p class="app-description">
+                    Version 1.2 includes:
+                </p>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li>Barcode scanner for quick item addition</li>
+                    <li>Enhanced recipe suggestions based on pantry items</li>
+                    <li>Improved shopping list functionality</li>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            </div>
+            
+            <div class="app-detail-section">
+                <h2 class="section-title">Features</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-title">Pantry Management</div>
+                            <div class="feature-desc">Track all your food items with expiration dates and quantities</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-title">Smart Shopping Lists</div>
+                            <div class="feature-desc">Automatically generate shopping lists based on your pantry needs</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-title">Barcode Scanner</div>
+                            <div class="feature-desc">Quickly add items to your pantry by scanning barcodes</div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensil-spoon"></i>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-title">Recipe Suggestions</div>
+                            <div class="feature-desc">Get personalized recipe ideas based on what you have available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-detail-section">
+                <h2 class="section-title">Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Seller</div>
+                        <div class="info-value">Akron Bay</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Size</div>
+                        <div class="info-value">52.3 MB</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Category</div>
+                        <div class="info-value">Food & Drink</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Compatibility</div>
+                        <div class="info-value">iPhone, iPad, iPod touch</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Languages</div>
+                        <div class="info-value">English</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Age Rating</div>
+                        <div class="info-value">4+</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Copyright</div>
+                        <div class="info-value">© 2025 Akron Bay</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Privacy Notice Sections -->
     <section class="privacy-notice" id="qid-privacy">
         <div class="privacy-container">
@@ -1468,7 +1627,7 @@
                 </ul>
                 
                 <h2>3. Data Storage and Security</h2>
-                <p>Your habit data and heaklth is stored locally on your device. We implement industry-standard security measures to protect your information.</p>
+                <p>Your habit data is stored locally on your device. We implement industry-standard security measures to protect your information.</p>
                 
                 <h2>4. Your Rights</h2>
                 <p>You have the right to access, modify, or delete your data at any time through the app settings.</p>
@@ -1513,7 +1672,7 @@
                 <p>Your study data is retained for as long as your account is active. You can request data deletion at any time.</p>
                 
                 <h2>5. Contact Us</h2>
-                <p>For privacy-related questions, contact us at: privacy@akronbay.com</p>
+                <p>For privacy-related questions, contact us at: DvnCodes@Gmail.com</p>
             </div>
         </div>
     </section>
@@ -1555,7 +1714,51 @@
                 <p>You have full control over your images and can delete them from the app at any time.</p>
                 
                 <h2>6. Contact Us</h2>
-                <p>For privacy-related questions, contact us at: privacy@akronbay.com</p>
+                <p>For privacy-related questions, contact us at: DvnCodes@Gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ChefMate Privacy Notice -->
+    <section class="privacy-notice" id="chefmate-privacy">
+        <div class="privacy-container">
+            <button class="back-button" onclick="hidePrivacyNotice()">
+                <i class="fas fa-arrow-left"></i> Back to App
+            </button>
+            
+            <div class="privacy-content">
+                <h1>Privacy Policy for Pantry Inventory: ChefMate</h1>
+                <p><strong>Last Updated:</strong> January 2025</p>
+                
+                <h2>1. Information We Collect</h2>
+                <p>ChefMate collects the following information to provide pantry management services:</p>
+                <ul>
+                    <li><strong>Pantry Inventory:</strong> Your food items, quantities, and expiration dates</li>
+                    <li><strong>Shopping Lists:</strong> Items you add to your shopping lists</li>
+                    <li><strong>App Usage Data:</strong> Anonymous analytics to improve functionality</li>
+                    <li><strong>Barcode Data:</strong> Product information from scanned barcodes</li>
+                </ul>
+                
+                <h2>2. How We Use Your Information</h2>
+                <p>We use collected information to:</p>
+                <ul>
+                    <li>Manage your pantry inventory and track expiration dates</li>
+                    <li>Generate shopping lists based on your needs</li>
+                    <li>Provide recipe suggestions using items in your pantry</li>
+                    <li>Improve app functionality and user experience</li>
+                </ul>
+                
+                <h2>3. Data Storage</h2>
+                <p>Your pantry data is stored locally on your device. We do not access your personal food inventory unless you explicitly enable cloud backup features.</p>
+                
+                <h2>4. Data Sharing</h2>
+                <p>We do not sell or share your personal pantry data with third parties. Anonymous, aggregated data may be used to improve our services.</p>
+                
+                <h2>5. Your Rights</h2>
+                <p>You can delete your pantry data at any time through the app settings. All data removal requests will be processed promptly.</p>
+                
+                <h2>6. Contact Us</h2>
+                <p>For privacy-related questions, contact us at: DvnCodes@Gmail.com</p>
             </div>
         </div>
     </section>
@@ -1639,12 +1842,13 @@
         });
 
         // Enhanced form submission with validation
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Basic validation
             const name = this.querySelector('#name').value.trim();
             const email = this.querySelector('#email').value.trim();
+            const subject = this.querySelector('#subject').value.trim();
             const message = this.querySelector('#message').value.trim();
             
             if (!name || !email || !message) {
@@ -1663,13 +1867,33 @@
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
-            // Simulate form submission
-            setTimeout(() => {
-                alert('Thank you for your message! We will get back to you soon.');
-                this.reset();
+            // Send email using Formspree
+            const formData = new FormData(this);
+            formData.append('_replyto', email);
+            formData.append('_subject', subject || 'Contact Form Submission');
+            
+            fetch('https://formspree.io/f/xdknwqjq', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                } else {
+                    alert('There was an error sending your message. Please try again or email us directly at DvnCodes@Gmail.com');
+                }
+            })
+            .catch(error => {
+                alert('There was an error sending your message. Please try again or email us directly at DvnCodes@Gmail.com');
+            })
+            .finally(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 1000);
+            });
         });
 
         // App detail page functionality
